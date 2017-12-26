@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>snapshot_credito_fact_source_stage_desde_base_cartera</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2013&#x2f;05&#x2f;30 21&#x3a;37&#x3a;35.972</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2013&#x2f;05&#x2f;30 21&#x3a;37&#x3a;35.972</modified_date>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Para cada credito desembolsado y no cancelado, obtener montos asociados a diferentes tipos de transacciones</note>
+      <xloc>11</xloc>
+      <yloc>7</yloc>
+      <width>660</width>
+      <heigth>26</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Tabla para verificar si los saldos desde el excel &#xa;coinciden con los saldos&#xa;calculados a partir de las transacciones</note>
+      <xloc>116</xloc>
+      <yloc>401</yloc>
+      <width>289</width>
+      <heigth>58</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>origen</name>
+    <server>source_sfi</server>
+    <type>INFORMIX</type>
+    <access>Native</access>
+    <database>tbase</database>
+    <port>1530</port>
+    <username>informix</username>
+    <password>Encrypted 2be98afc86aa7f2e4a217a87fcc9fa6c2</password>
+    <servername>online</servername>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1530</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>source_sai</name>
+    <server>sfiserver</server>
+    <type>INFORMIX</type>
+    <access>Native</access>
+    <database>tbsai</database>
+    <port>1530</port>
+    <username>informix</username>
+    <password>Encrypted 2be98afc86aa7f2aaad16f6278dc0e5d3</password>
+    <servername>online</servername>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1530</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>source_sfi</name>
+    <server>sfiserver</server>
+    <type>INFORMIX</type>
+    <access>Native</access>
+    <database>tbase</database>
+    <port>1530</port>
+    <username>informix</username>
+    <password>Encrypted 2be98afc86ae880bce14efd2186c6ffd3</password>
+    <servername>online</servername>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1530</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>source_sfi1</name>
+    <server>sfiserver</server>
+    <type>INFORMIX</type>
+    <access>Native</access>
+    <database>tbase</database>
+    <port>1530</port>
+    <username>informix</username>
+    <password>Encrypted 2be98afc86aa7f2e4a217a87fcc9fa6c2</password>
+    <servername>online</servername>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1530</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>staging_db</name>
+    <server>stageserver</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>frame_cube_staging</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>target_dw</name>
+    <server>dwserver</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>frame_cube</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Saldo</from><to>Desembolso</to><enabled>Y</enabled> </hop>
+  <hop> <from>Desembolso</from><to>Recuperacion</to><enabled>Y</enabled> </hop>
+  <hop> <from>Recuperacion</from><to>Interes</to><enabled>Y</enabled> </hop>
+  <hop> <from>Obtener contadores y tasa variable</from><to>Calculator</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculator</from><to>snapshot_credito_fact_tra</to><enabled>Y</enabled> </hop>
+  <hop> <from>Interes</from><to>tasas base y spread</to><enabled>Y</enabled> </hop>
+  <hop> <from>tasas base y spread</from><to>tasa externa</to><enabled>Y</enabled> </hop>
+  <hop> <from>Null -&#x3e; 0</from><to>Obtener contadores y tasa variable</to><enabled>Y</enabled> </hop>
+  <hop> <from>Tipo cambio</from><to>Saldo</to><enabled>Y</enabled> </hop>
+  <hop> <from>tasa externa</from><to>nro creditos</to><enabled>Y</enabled> </hop>
+  <hop> <from>nro creditos</from><to>hubo castigo</to><enabled>Y</enabled> </hop>
+  <hop> <from>hubo castigo</from><to>hubo cancelacion</to><enabled>Y</enabled> </hop>
+  <hop> <from>hubo cancelacion</from><to>Null -&#x3e; 0</to><enabled>Y</enabled> </hop>
+  <hop> <from>base_cartera_fact</from><to>Tipo cambio</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculator</from><to>saldo_diferente</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Calculator</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>codigo_cliente</field_name>
+<calc_type>COPY_FIELD</calc_type>
+<field_a>prmprcage</field_a>
+<field_b/>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>codigo_oficial</field_name>
+<calc_type>COPY_FIELD</calc_type>
+<field_a>prmprrseg</field_a>
+<field_b/>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>moneda</field_name>
+<calc_type>COPY_FIELD</calc_type>
+<field_a>prmprcmon</field_a>
+<field_b/>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>prmprlncr</field_name>
+<calc_type>CONSTANT</calc_type>
+<field_a>0</field_a>
+<field_b/>
+<field_c/>
+<value_type>None</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>605</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Desembolso</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_sfi</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select &#xd;&#xa;  SUM&#x28;prtdtimpp&#x29; as monto_desembolsado  &#xd;&#xa;from &#xd;&#xa;prmpr INNER JOIN prtdt ON prmprnpre &#x3d; prtdtnpre&#xd;&#xa;where prtdtmrcb &#x3d; 0&#xd;&#xa;and prtdtftra between &#x3f; and &#x3f;&#xd;&#xa;and prmprnpre &#x3d; &#x3f; &#xd;&#xa;and prtdtpref&#x3d;20 and prtdtccon &#x3d; 1 and prtdtttrn&#x3d;1&#xd;&#xa;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>fecha_snapshot_inicio</name>
+        <type>None</type>
+      </field>
+      <field>
+        <name>fecha_snapshot_fin</name>
+        <type>None</type>
+      </field>
+      <field>
+        <name>prmprnpre</name>
+        <type>None</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>434</xloc>
+      <yloc>324</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Interes</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_sfi</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select &#xd;&#xa;  SUM&#x28;-prtdtimpp&#x29; as monto_intereses&#xd;&#xa;from &#xd;&#xa;prmpr INNER JOIN prtdt ON prmprnpre &#x3d; prtdtnpre&#xd;&#xa;where prtdtmrcb &#x3d; 0&#xd;&#xa;and prtdtftra between &#x3f; and &#x3f;&#xd;&#xa;and prmprnpre &#x3d; &#x3f; &#xd;&#xa;and &#x28; &#x28;prtdtpref&#x3d;21 and prtdtccon &#x3d; 99&#x29; or &#x28;prtdtpref&#x3d;20 and prtdtccon &#x3d; 2&#x29; &#x29; &#xd;&#xa;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>fecha_snapshot_inicio</name>
+        <type>None</type>
+      </field>
+      <field>
+        <name>fecha_snapshot_fin</name>
+        <type>None</type>
+      </field>
+      <field>
+        <name>prmprnpre</name>
+        <type>None</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>646</xloc>
+      <yloc>319</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Null -&#x3e; 0</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>Y</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>saldo</name>
+        <value>&#x24;&#x7b;ENTERO_NULO&#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>monto_desembolsado</name>
+        <value>&#x24;&#x7b;ENTERO_NULO&#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>monto_recuperado</name>
+        <value>&#x24;&#x7b;ENTERO_NULO&#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>monto_intereses</name>
+        <value>&#x24;&#x7b;ENTERO_NULO&#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>l_tbase</name>
+        <value>&#x24;&#x7b;ENTERO_NULO&#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>l_spread</name>
+        <value>&#x24;&#x7b;ENTERO_NULO&#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>prtextasa</name>
+        <value>&#x24;&#x7b;ENTERO_NULO&#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>dias_mora</name>
+        <value>&#x24;&#x7b;ENTERO_NULO&#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>nro_creditos</name>
+        <value>&#x24;&#x7b;ENTERO_NULO&#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>hubo_castigo</name>
+        <value>&#x24;&#x7b;ENTERO_NULO&#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>prmprrseg</name>
+        <value>&#x24;&#x7b;ENTERO_NULO&#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>926</xloc>
+      <yloc>518</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Obtener contadores y tasa variable</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>Processor</class_name>
+
+        <class_source><![CDATA[import java.math.BigDecimal;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+	Object[] row = getRow();
+	if (row == null) {
+		setOutputDone();
+		return false;
+	}
+
+    if (first)
+    {
+        first = false;
+    }
+
+	// It is always safest to call createOutputRow() to ensure that your output row's Object[] is large
+    // enough to handle any new fields you are creating in this step.
+    row = createOutputRow(row, data.outputRowMeta.size());
+
+	double saldoCastigado = get(Fields.In, "hubo_castigo").getInteger(row) > 0 ? get(Fields.In, "saldo").getNumber(row).doubleValue() : 0;
+
+	Long huboDesembolso = get(Fields.In, "monto_desembolsado").getBigNumber(row).doubleValue() > 0 ? 1L : 0L;
+	Long huboRecuperacion = get(Fields.In, "monto_recuperado").getBigNumber(row).doubleValue() > 0 ? 1L : 0L;
+	Long huboIntereses = get(Fields.In, "monto_intereses").getBigNumber(row).doubleValue() > 0 ? 1L : 0L;
+    
+
+	Long idTasaExterna = get(Fields.In, "l_tsex").getInteger(row);
+	Double tasaVariable = get(Fields.In, "l_spread").getNumber(row) 
+							+ (idTasaExterna == null ? get(Fields.In, "l_tbase").getNumber(row) : get(Fields.In, "prtextasa").getNumber(row));
+
+
+//	logBasic("*** prmprcmon *** > " + get(Fields.In, "prmprcmon").getInteger(row));
+//	logBasic("*** tipo_cambio_me *** > " + get(Fields.In, "tipo_cambio_me").getNumber(row).doubleValue());
+//	logBasic("*** prmprmdes *** > " + get(Fields.In, "prmprmdes").getNumber(row).doubleValue());
+
+	Double saldoME = get(Fields.In, "prmprcmon").getInteger(row) == 1L ? get(Fields.In, "saldo").getNumber(row).doubleValue() / get(Fields.In, "tipo_cambio_me").getNumber(row).doubleValue()  
+																						: get(Fields.In, "saldo").getNumber(row).doubleValue();
+	Double saldoCastigadoME = get(Fields.In, "prmprcmon").getInteger(row) == 1L ? saldoCastigado / get(Fields.In, "tipo_cambio_me").getNumber(row).doubleValue()
+																					: saldoCastigado;
+
+	Double montoDesembolsadoME = get(Fields.In, "prmprcmon").getInteger(row) == 1L ? get(Fields.In, "monto_desembolsado").getNumber(row).doubleValue() / get(Fields.In, "tipo_cambio_me").getNumber(row).doubleValue()  
+																						: get(Fields.In, "monto_desembolsado").getNumber(row).doubleValue();
+  	
+	Double montoRecuperadoME = get(Fields.In, "prmprcmon").getInteger(row) == 1L ? get(Fields.In, "monto_recuperado").getNumber(row).doubleValue() / get(Fields.In, "tipo_cambio_me").getNumber(row).doubleValue()  
+																						: get(Fields.In, "monto_recuperado").getNumber(row).doubleValue();
+  	
+	Double montoInteresesME = get(Fields.In, "prmprcmon").getInteger(row) == 1L ? get(Fields.In, "monto_intereses").getNumber(row).doubleValue() / get(Fields.In, "tipo_cambio_me").getNumber(row).doubleValue()  
+																						: get(Fields.In, "monto_intereses").getNumber(row).doubleValue();
+
+	Double montoTotalDesembolsadoME = get(Fields.In, "prmprcmon").getInteger(row) == 1L ? get(Fields.In, "prmprmdes").getNumber(row).doubleValue() / get(Fields.In, "tipo_cambio_me").getNumber(row).doubleValue()  
+																						: get(Fields.In, "prmprmdes").getNumber(row).doubleValue();
+
+	Long esClienteNuevo = get(Fields.In, "nro_creditos").getInteger(row) == 1L ? 1L : 0L;
+
+    get(Fields.Out, "hubo_desembolso").setValue(row, huboDesembolso);	
+    get(Fields.Out, "hubo_recuperacion").setValue(row, huboRecuperacion);	
+    get(Fields.Out, "hubo_intereses").setValue(row, huboIntereses);
+	get(Fields.Out, "tasa_variable").setValue(row, tasaVariable);
+	get(Fields.Out, "saldo_me").setValue(row,new BigDecimal(saldoME));
+	get(Fields.Out, "saldo_castigado").setValue(row,new BigDecimal(saldoCastigado));
+	get(Fields.Out, "saldo_castigado_me").setValue(row,new BigDecimal(saldoCastigadoME));
+	get(Fields.Out, "monto_desembolsado_me").setValue(row,new BigDecimal(montoDesembolsadoME));
+	get(Fields.Out, "monto_recuperado_me").setValue(row,new BigDecimal(montoRecuperadoME));
+	get(Fields.Out, "monto_intereses_me").setValue(row,new BigDecimal(montoInteresesME));
+	get(Fields.Out, "monto_total_desembolsado_me").setValue(row,new BigDecimal(montoTotalDesembolsadoME));
+	get(Fields.Out, "es_cliente_nuevo").setValue(row, esClienteNuevo);
+			
+
+	// Send the row on to the next step.
+    putRow(data.outputRowMeta, row);
+
+	return true;
+}
+]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+        <field>
+        <field_name>hubo_desembolso</field_name>
+
+        <field_type>Integer</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>hubo_recuperacion</field_name>
+
+        <field_type>Integer</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>hubo_intereses</field_name>
+
+        <field_type>Integer</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>tasa_variable</field_name>
+
+        <field_type>Number</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>monto_total_desembolsado_me</field_name>
+
+        <field_type>BigNumber</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>es_cliente_nuevo</field_name>
+
+        <field_type>Integer</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>saldo_me</field_name>
+
+        <field_type>BigNumber</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>saldo_castigado</field_name>
+
+        <field_type>BigNumber</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>saldo_castigado_me</field_name>
+
+        <field_type>BigNumber</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>monto_desembolsado_me</field_name>
+
+        <field_type>BigNumber</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>monto_recuperado_me</field_name>
+
+        <field_type>BigNumber</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>monto_intereses_me</field_name>
+
+        <field_type>BigNumber</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+    </fields><clear_result_fields>N</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>756</xloc>
+      <yloc>519</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Recuperacion</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_sfi</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select &#xd;&#xa;  SUM&#x28;-prtdtimpp&#x29; as monto_recuperado &#xd;&#xa;from &#xd;&#xa;prmpr INNER JOIN prtdt ON prmprnpre &#x3d; prtdtnpre&#xd;&#xa;where prtdtmrcb &#x3d; 0&#xd;&#xa;and prtdtftra between &#x3f; and &#x3f;&#xd;&#xa;and prmprnpre &#x3d; &#x3f; &#xd;&#xa;and prtdtpref&#x3d;20 and prtdtccon &#x3d; 1 and prtdtttrn&#x3d;2&#xd;&#xa;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>fecha_snapshot_inicio</name>
+        <type>None</type>
+      </field>
+      <field>
+        <name>fecha_snapshot_fin</name>
+        <type>None</type>
+      </field>
+      <field>
+        <name>prmprnpre</name>
+        <type>None</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>547</xloc>
+      <yloc>319</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Saldo</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_sfi</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select &#xd;&#xa;  SUM&#x28;prtdtimpp&#x29; as saldo&#xd;&#xa;from &#xd;&#xa;prtdt INNER JOIN prmpr ON prmprnpre &#x3d; prtdtnpre&#xd;&#xa;where prtdtmrcb &#x3d; 0&#xd;&#xa;and prtdtftra &#x3c;&#x3d; &#x3f;			--Fecha&#xd;&#xa;and prtdtnpre &#x3d; &#x3f;			--Credito &#xd;&#xa;and prtdtpref&#x3d;20 and prtdtccon &#x3d; 1 </sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>fecha_snapshot_fin</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>prmprnpre</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>308</xloc>
+      <yloc>323</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>saldo_diferente</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>staging_db</connection>
+    <schema/>
+    <table>saldo_diferente</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>fecha_snapshot</column_name>
+          <stream_name>fecha_snapshot_fin</stream_name>
+        </field>
+        <field>
+          <column_name>prmprnpre</column_name>
+          <stream_name>prmprnpre</stream_name>
+        </field>
+        <field>
+          <column_name>saldo_excel</column_name>
+          <stream_name>prmprsald</stream_name>
+        </field>
+        <field>
+          <column_name>saldo_db</column_name>
+          <stream_name>saldo</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>433</xloc>
+      <yloc>420</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Tipo cambio</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_sfi</connection>
+    <rowlimit>0</rowlimit>
+    <sql>SELECT FIRST 1 gbhtctcof as tipo_cambio_me&#xd;&#xa;FROM gbhtc&#xd;&#xa;WHERE &#xd;&#xa;gbhtcfech &#x3c;&#x3d; &#x3f;&#xd;&#xa;ORDER BY gbhtcfech DESC</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>fecha_snapshot_fin</name>
+        <type>Date</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>164</xloc>
+      <yloc>324</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>base_cartera_fact</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>staging_db</connection>
+    <sql>select &#xd;&#xa;  fecha_snapshot_inicio,&#xd;&#xa;  fecha_snapshot_fin,&#xd;&#xa;  prmprnpre,&#xd;&#xa;  prmprcage,&#xd;&#xa;  prmprrseg,&#xd;&#xa;  prmpragen,&#xd;&#xa;  prmprcmon,&#xd;&#xa;  prmprlncr, &#xd;&#xa;  prmprmdes,&#xd;&#xa;  prmprstat,&#xd;&#xa;  dias_mora,&#xa;  prmprsald&#xd;&#xa;from base_cartera_fact&#xd;&#xa;where &#x28;prmprstat &#x3c;&#x3e; 1 AND NOT &#x28;prmprstat &#x3d; 9 and prmprfsta &#x3c; fecha_snapshot_inicio&#x29;&#x29;&#xd;&#xa;&#xd;&#xa;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>164</xloc>
+      <yloc>136</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>hubo cancelacion</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_sfi</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as hubo_cancelacion&#xd;&#xa;from prmpr&#xd;&#xa;where prmprstat &#x3d; 9&#xd;&#xa;and prmprfsta BETWEEN &#x3f; AND &#x3f;&#xd;&#xa;and prmprnpre &#x3d; &#x3f;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>fecha_snapshot_inicio</name>
+        <type>None</type>
+      </field>
+      <field>
+        <name>fecha_snapshot_fin</name>
+        <type>None</type>
+      </field>
+      <field>
+        <name>prmprnpre</name>
+        <type>None</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1029</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>hubo castigo</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_sfi</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as hubo_castigo&#xd;&#xa;from prmpr&#xd;&#xa;where prmprstat &#x3d; 7&#xd;&#xa;and prmprfsta BETWEEN &#x3f; AND &#x3f;&#xd;&#xa;and prmprnpre &#x3d; &#x3f;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>fecha_snapshot_inicio</name>
+        <type>None</type>
+      </field>
+      <field>
+        <name>fecha_snapshot_fin</name>
+        <type>None</type>
+      </field>
+      <field>
+        <name>prmprnpre</name>
+        <type>None</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1120</xloc>
+      <yloc>412</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>nro creditos</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_sfi</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as nro_creditos&#xd;&#xa;from prmpr &#xd;&#xa;where prmprstat &#x3c;&#x3e; 1&#xd;&#xa;and prmprfdes &#x3c;&#x3d; &#x3f;&#xd;&#xa;and prmprcage &#x3d; &#x3f;&#xd;&#xa;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>fecha_snapshot_fin</name>
+        <type>None</type>
+      </field>
+      <field>
+        <name>prmprcage</name>
+        <type>None</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1120</xloc>
+      <yloc>302</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>snapshot_credito_fact_tra</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>staging_db</connection>
+    <schema>public</schema>
+    <table>snapshot_credito_fact_tra</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>fecha_snapshot</column_name>
+          <stream_name>fecha_snapshot_fin</stream_name>
+        </field>
+        <field>
+          <column_name>prmprnpre</column_name>
+          <stream_name>prmprnpre</stream_name>
+        </field>
+        <field>
+          <column_name>prmprcage</column_name>
+          <stream_name>prmprcage</stream_name>
+        </field>
+        <field>
+          <column_name>prmprrseg</column_name>
+          <stream_name>prmprrseg</stream_name>
+        </field>
+        <field>
+          <column_name>prmpragen</column_name>
+          <stream_name>prmpragen</stream_name>
+        </field>
+        <field>
+          <column_name>prmprcmon</column_name>
+          <stream_name>prmprcmon</stream_name>
+        </field>
+        <field>
+          <column_name>prmprlncr</column_name>
+          <stream_name>prmprlncr</stream_name>
+        </field>
+        <field>
+          <column_name>saldo</column_name>
+          <stream_name>saldo</stream_name>
+        </field>
+        <field>
+          <column_name>saldo_me</column_name>
+          <stream_name>saldo_me</stream_name>
+        </field>
+        <field>
+          <column_name>hubo_desembolso</column_name>
+          <stream_name>hubo_desembolso</stream_name>
+        </field>
+        <field>
+          <column_name>monto_desembolsado</column_name>
+          <stream_name>monto_desembolsado</stream_name>
+        </field>
+        <field>
+          <column_name>monto_desembolsado_me</column_name>
+          <stream_name>monto_desembolsado_me</stream_name>
+        </field>
+        <field>
+          <column_name>hubo_recuperacion</column_name>
+          <stream_name>hubo_recuperacion</stream_name>
+        </field>
+        <field>
+          <column_name>monto_recuperado</column_name>
+          <stream_name>monto_recuperado</stream_name>
+        </field>
+        <field>
+          <column_name>monto_recuperado_me</column_name>
+          <stream_name>monto_recuperado_me</stream_name>
+        </field>
+        <field>
+          <column_name>hubo_intereses</column_name>
+          <stream_name>hubo_intereses</stream_name>
+        </field>
+        <field>
+          <column_name>monto_intereses</column_name>
+          <stream_name>monto_intereses</stream_name>
+        </field>
+        <field>
+          <column_name>monto_intereses_me</column_name>
+          <stream_name>monto_intereses_me</stream_name>
+        </field>
+        <field>
+          <column_name>tasa_variable</column_name>
+          <stream_name>tasa_variable</stream_name>
+        </field>
+        <field>
+          <column_name>es_cliente_nuevo</column_name>
+          <stream_name>es_cliente_nuevo</stream_name>
+        </field>
+        <field>
+          <column_name>codigo_cliente</column_name>
+          <stream_name>codigo_cliente</stream_name>
+        </field>
+        <field>
+          <column_name>codigo_oficial</column_name>
+          <stream_name>codigo_oficial</stream_name>
+        </field>
+        <field>
+          <column_name>moneda</column_name>
+          <stream_name>moneda</stream_name>
+        </field>
+        <field>
+          <column_name>tipo_cambio_me</column_name>
+          <stream_name>tipo_cambio_me</stream_name>
+        </field>
+        <field>
+          <column_name>monto_total_desembolsado</column_name>
+          <stream_name>prmprmdes</stream_name>
+        </field>
+        <field>
+          <column_name>monto_total_desembolsado_me</column_name>
+          <stream_name>monto_total_desembolsado_me</stream_name>
+        </field>
+        <field>
+          <column_name>dias_mora</column_name>
+          <stream_name>dias_mora</stream_name>
+        </field>
+        <field>
+          <column_name>hubo_castigo</column_name>
+          <stream_name>hubo_castigo</stream_name>
+        </field>
+        <field>
+          <column_name>saldo_castigado</column_name>
+          <stream_name>saldo_castigado</stream_name>
+        </field>
+        <field>
+          <column_name>saldo_castigado_me</column_name>
+          <stream_name>saldo_castigado_me</stream_name>
+        </field>
+        <field>
+          <column_name>estado</column_name>
+          <stream_name>prmprstat</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>430</xloc>
+      <yloc>519</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>tasa externa</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_sfi</connection>
+    <rowlimit>0</rowlimit>
+    <sql>SELECT FIRST 1 prtextasa&#xd;&#xa;FROM prtex&#xd;&#xa;WHERE prtexfvig &#x3c;&#x3d; &#x3f;&#xd;&#xa;AND prtextsex &#x3d; &#x3f;&#xd;&#xa;ORDER BY prtexfvig DESC	</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>fecha_snapshot_fin</name>
+        <type>None</type>
+      </field>
+      <field>
+        <name>l_tsex</name>
+        <type>None</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>939</xloc>
+      <yloc>318</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>tasas base y spread</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_sfi</connection>
+    <rowlimit>0</rowlimit>
+    <sql>SELECT FIRST 1 prtsanpre&#xd;&#xa;		, prtsatbas	as l_tbase&#xd;&#xa;		, prtsasprd	as l_spread&#xd;&#xa;		, prmprtsex as l_tsex&#xd;&#xa;FROM prmpr&#xd;&#xa;INNER JOIN prtsa ON prmprnpre &#x3d; prtsanpre&#xd;&#xa;WHERE prtsafvig &#x3c;&#x3d; &#x3f; &#xd;&#xa;AND prtsanpre &#x3d; &#x3f;&#xd;&#xa;ORDER BY prtsafvig DESC&#xd;&#xa;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>fecha_snapshot_fin</name>
+        <type>None</type>
+      </field>
+      <field>
+        <name>prmprnpre</name>
+        <type>None</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>775</xloc>
+      <yloc>318</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>

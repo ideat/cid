@@ -1,0 +1,2232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>evaluacion_creditos_calificacion</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2014&#x2f;08&#x2f;07 16&#x3a;07&#x3a;33.155</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2014&#x2f;08&#x2f;07 16&#x3a;07&#x3a;33.155</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>excel</name>
+    <server/>
+    <type>GENERIC</type>
+    <access>Native</access>
+    <database/>
+    <port>-1</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>CUSTOM_DRIVER_CLASS</code><attribute>sun.jdbc.odbc.JdbcOdbcDriver</attribute></attribute>
+      <attribute><code>CUSTOM_URL</code><attribute>jdbc&#x3a;odbc&#x3a;Driver&#x3d;&#x7b;Microsoft Excel Driver &#x28;&#x2a;.xls, &#x2a;.xlsx, &#x2a;.xlsm, &#x2a;.xlsb&#x29;&#x7d;&#x3b;DBQ&#x3d;E&#x3a;&#x5c;workspace-pentaho&#x5c;bi-quillacollo&#x5c;etl&#x5c;excel&#x5c;metas-incentivos-oficial.xlsx&#x3b;</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>-1</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>excel_calce</name>
+    <server/>
+    <type>GENERIC</type>
+    <access>Native</access>
+    <database/>
+    <port>-1</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>CUSTOM_DRIVER_CLASS</code><attribute>sun.jdbc.odbc.JdbcOdbcDriver</attribute></attribute>
+      <attribute><code>CUSTOM_URL</code><attribute>jdbc&#x3a;odbc&#x3a;Driver&#x3d;&#x7b;Microsoft Excel Driver &#x28;&#x2a;.xls, &#x2a;.xlsx, &#x2a;.xlsm, &#x2a;.xlsb&#x29;&#x7d;&#x3b;DBQ&#x3d;E&#x3a;&#x5c;workspace-pentaho&#x5c;bi-quillacollo&#x5c;etl&#x5c;excel&#x5c;calce_plazos.xlsx&#x3b;</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>-1</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>origen</name>
+    <server>source_sfi</server>
+    <type>INFORMIX</type>
+    <access>Native</access>
+    <database>tbase</database>
+    <port>1530</port>
+    <username>informix</username>
+    <password>Encrypted 2be98afc86aa7f2e4a217a87fcc9fa6c2</password>
+    <servername>online</servername>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1530</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>source_sai</name>
+    <server>sfiserver</server>
+    <type>INFORMIX</type>
+    <access>Native</access>
+    <database>tbsai</database>
+    <port>1530</port>
+    <username>informix</username>
+    <password>Encrypted 2be98afc86aa7f2aaad16f6278dc0e5d3</password>
+    <servername>online</servername>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1530</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>source_sfi</name>
+    <server>sfiserver</server>
+    <type>INFORMIX</type>
+    <access>Native</access>
+    <database>tbase</database>
+    <port>1530</port>
+    <username>informix</username>
+    <password>Encrypted 2be98afc86aa7f2e4a217a87fcc9fa6c2</password>
+    <servername>online</servername>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1530</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>source_sfi1</name>
+    <server>sfiserver</server>
+    <type>INFORMIX</type>
+    <access>Native</access>
+    <database>tbase</database>
+    <port>1530</port>
+    <username>informix</username>
+    <password>Encrypted 2be98afc86aa7f2e4a217a87fcc9fa6c2</password>
+    <servername>online</servername>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1530</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>staging_db</name>
+    <server>stageserver</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>frame_cube_staging</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>target_dw</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>frame_cube</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>creditos para evaluacion</from><to>Hipotecaria 1er grado</to><enabled>Y</enabled> </hop>
+  <hop> <from>Hipotecaria 1er grado</from><to>Fecha proximo pago antes fin de mes</to><enabled>Y</enabled> </hop>
+  <hop> <from>evalucion calificacion y prevision</from><to>Buscar fecha_key</to><enabled>Y</enabled> </hop>
+  <hop> <from>Buscar fecha_key</from><to>Buscar credito</to><enabled>Y</enabled> </hop>
+  <hop> <from>Buscar credito</from><to>Buscar oficial</to><enabled>Y</enabled> </hop>
+  <hop> <from>Buscar oficial</from><to>Buscar agencia</to><enabled>Y</enabled> </hop>
+  <hop> <from>Buscar agencia</from><to>Buscar cliente</to><enabled>Y</enabled> </hop>
+  <hop> <from>Buscar cliente</from><to>Buscar moneda</to><enabled>Y</enabled> </hop>
+  <hop> <from>Buscar moneda</from><to>Table output</to><enabled>N</enabled> </hop>
+  <hop> <from>If field value is null</from><to>evalucion calificacion y prevision</to><enabled>Y</enabled> </hop>
+  <hop> <from>Fecha proximo pago antes fin de mes</from><to>Valor garantia hipotecaria del cliente</to><enabled>Y</enabled> </hop>
+  <hop> <from>Buscar moneda</from><to>Microsoft Excel Output</to><enabled>N</enabled> </hop>
+  <hop> <from>Buscar moneda</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>Monto garantias hipotecarias</from><to>If field value is null</to><enabled>Y</enabled> </hop>
+  <hop> <from>Valor garantia hipotecaria del cliente</from><to>Saldo total deuda exp ME</to><enabled>Y</enabled> </hop>
+  <hop> <from>Saldo total deuda exp ME</from><to>Monto garantias hipotecarias</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Buscar agencia</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>agencia_dim</table>
+      <connection>target_dw</connection>
+      <commit>100</commit>
+      <update>N</update>
+      <fields>
+        <key>
+          <name>prmpragen</name>
+          <lookup>codigo_tx</lookup>
+        </key>
+        <date>
+          <name>fecha_key</name>
+          <from>valido_desde</from>
+          <to>valido_hasta</to>
+        </date>
+        <return>
+          <name>agencia_key</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>623</xloc>
+      <yloc>253</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Buscar cliente</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>cliente_dim</table>
+      <connection>target_dw</connection>
+      <commit>100</commit>
+      <update>N</update>
+      <fields>
+        <key>
+          <name>prmprcage</name>
+          <lookup>codigo_tx</lookup>
+        </key>
+        <date>
+          <name>fecha_key</name>
+          <from>valido_desde</from>
+          <to>valido_hasta</to>
+        </date>
+        <return>
+          <name>cliente_key</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>783</xloc>
+      <yloc>253</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Buscar credito</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>credito_dim</table>
+      <connection>target_dw</connection>
+      <commit>100</commit>
+      <update>N</update>
+      <fields>
+        <key>
+          <name>prmprnpre</name>
+          <lookup>codigo_tx</lookup>
+        </key>
+        <date>
+          <name>fecha_key</name>
+          <from>valido_desde</from>
+          <to>valido_hasta</to>
+        </date>
+        <return>
+          <name>credito_key</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>317</xloc>
+      <yloc>251</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Buscar fecha_key</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>target_dw</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>fecha_dim</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>gbpmtfdia</name>
+        <field>fecha_key</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>fecha_key</name>
+        <rename>fecha_key</rename>
+        <default>1900&#x2f;01&#x2f;01 00&#x3a;00&#x3a;00.000</default>
+        <type>Date</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>43</xloc>
+      <yloc>251</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Buscar moneda</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>target_dw</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>moneda_dim</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>prmprcmon</name>
+        <field>codigo_tx</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>moneda_key</name>
+        <rename>moneda_key</rename>
+        <default>0</default>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>971</xloc>
+      <yloc>254</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Buscar oficial</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>oficial_dim</table>
+      <connection>target_dw</connection>
+      <commit>100</commit>
+      <update>N</update>
+      <fields>
+        <key>
+          <name>prmprrseg</name>
+          <lookup>codigo_tx</lookup>
+        </key>
+        <date>
+          <name>fecha_key</name>
+          <from>valido_desde</from>
+          <to>valido_hasta</to>
+        </date>
+        <return>
+          <name>oficial_key</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>471</xloc>
+      <yloc>253</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Fecha proximo pago antes fin de mes</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>staging_db</connection>
+    <rowlimit>0</rowlimit>
+    <sql>Select min &#x28;&#xd;&#xa;case&#xa;  when tp.prppgfech is null then to_date&#x28;&#x27;01&#x2f;01&#x2f;1900&#x27;,&#x27;dd&#x2f;MM&#x2f;yyyy&#x27;&#x29;&#xa;  else tp.prppgfech&#xa;end&#x29; as proxima_fecha_pago&#xd;&#xa;from evaluacion_credito_tra cd &#xd;&#xa;inner join transaccion_plan_pagos_tra tp on &#x28;tp.prppgnpre &#x3d; cd.prmprnpre&#x29;&#xd;&#xa;where&#xd;&#xa;cd.prmprstat in &#x28;2,4,5,6&#x29;&#xd;&#xa;and cd.prmprnpre &#x3d; &#x3f;&#xd;&#xa;and tp.prppgfech between  &#x3f; and &#x3f; --to_date&#x28;&#x27;2014-04-30&#x27;,&#x27;yyyy-MM-dd&#x27;&#x29;&#xd;&#xa;--and cd.prmprfinc &#x3d; to_date&#x28;&#x27;1900-01-01&#x27;,&#x27;yyyy-MM-dd&#x27;&#x29;&#xd;&#xa;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>prmprnpre</name>
+        <type>String</type>
+      </field>
+      <field>
+        <name>gbpmtfdia</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>fin_mes</name>
+        <type>Date</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>414</xloc>
+      <yloc>63</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Hipotecaria 1er grado</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>staging_db</connection>
+    <rowlimit>0</rowlimit>
+    <sql>SELECT prgarnpre,&#xd;&#xa;case &#xd;&#xa;  when prgartgar in &#x28;7,22,47,87&#x29; then 1&#xd;&#xa;  else 0&#xd;&#xa;end as primer_grado&#xd;&#xa;FROM detalle_garantias&#xd;&#xa;where prgarnpre &#x3d; &#x3f;&#xd;&#xa;order by 2 desc&#xd;&#xa;limit 1</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>prmprnpre</name>
+        <type>String</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>199</xloc>
+      <yloc>63</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>If field value is null</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>Y</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>primer_grado</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>monto_garantia</name>
+        <value>&#x24;&#x7b;REAL_NULO&#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1136</xloc>
+      <yloc>59</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Microsoft Excel Output</name>
+    <type>ExcelOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <encoding/>
+    <append>N</append>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>C&#x3a;&#x5c;Users&#x5c;freddy&#x5c;Desktop&#x5c;nov.xls.xls</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory/>
+      </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
+    <fields>
+      <field>
+        <name>prmprnpre</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>gbconabre</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>gbhtctcof</name>
+        <type>Number</type>
+        <format>000.00</format>
+      </field>
+      <field>
+        <name>dias_mora</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>gbpmtfdia</name>
+        <type>Date</type>
+        <format/>
+      </field>
+      <field>
+        <name>prmpragen</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>prmprcmon</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>prmprrseg</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>prmprsald</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>prmprstat</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>prmprtcre</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>saldo_credito_me</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>prmprfinc</name>
+        <type>Date</type>
+        <format/>
+      </field>
+      <field>
+        <name>prmprcage</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>estado</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>sector</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>fin_mes</name>
+        <type>Date</type>
+        <format/>
+      </field>
+      <field>
+        <name>prmprfdes</name>
+        <type>Date</type>
+        <format/>
+      </field>
+      <field>
+        <name>gbagecalf</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>prgarnpre</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>primer_grado</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>proxima_fecha_pago</name>
+        <type>Date</type>
+        <format/>
+      </field>
+      <field>
+        <name>monto_garantia</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>calificacion</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>prevision</name>
+        <type>Number</type>
+        <format/>
+      </field>
+      <field>
+        <name>calificacion_fin_mes</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>prevision_fin_mes</name>
+        <type>Number</type>
+        <format/>
+      </field>
+      <field>
+        <name>dias_mora_fin_mes</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>fecha_desembolso</name>
+        <type>Date</type>
+        <format/>
+      </field>
+      <field>
+        <name>categoria</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>fecha_key</name>
+        <type>Date</type>
+        <format/>
+      </field>
+      <field>
+        <name>credito_key</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>oficial_key</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>agencia_key</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>cliente_key</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>moneda_key</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+    </fields>
+    <custom>
+    <header_font_name>arial</header_font_name>
+    <header_font_size>10</header_font_size>
+    <header_font_bold>N</header_font_bold>
+    <header_font_italic>N</header_font_italic>
+    <header_font_underline>no</header_font_underline>
+    <header_font_orientation>horizontal</header_font_orientation>
+    <header_font_color>black</header_font_color>
+    <header_background_color>none</header_background_color>
+    <header_row_height>255</header_row_height>
+    <header_alignment>left</header_alignment>
+    <header_image/>
+    <row_font_name>arial</row_font_name>
+    <row_font_size>10</row_font_size>
+    <row_font_color>black</row_font_color>
+    <row_background_color>none</row_background_color>
+      </custom>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>929</xloc>
+      <yloc>366</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Monto garantias hipotecarias</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>staging_db</connection>
+    <rowlimit>0</rowlimit>
+    <sql>SELECT &#xd;&#xa;     cast&#x28;	sum&#x28;&#xd;&#xa;        case &#xd;&#xa;  		 when d.prgartgar in &#x28;7,22,47,87&#x29; and d.prgarcmon &#x3d; 2 then d.prgargfin&#xd;&#xa;         when d.prgartgar in &#x28;7,22,47,87&#x29; and d.prgarcmon &#x3d; 1 then d.prgargfin&#x2f;&#x3f;&#xd;&#xa;  		 else 0&#xd;&#xa;		end&#x29; as numeric&#x29; as monto_garantia_hipotecaria&#xd;&#xa;FROM detalle_garantias d&#xd;&#xa;inner join evaluacion_credito_tra e on &#x28;e.prmprnpre &#x3d; d.prgarnpre&#x29; &#xd;&#xa;where d.prgarnpre &#x3d; &#x3f;&#xd;&#xa;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>gbhtctcof</name>
+        <type>Number</type>
+      </field>
+      <field>
+        <name>prgarnpre</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>988</xloc>
+      <yloc>60</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Saldo total deuda exp ME</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>staging_db</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select sum &#x28;&#xd;&#xa;  case&#xd;&#xa;    when e.prmprcmon &#x3d; 1 then e.prmprsald&#x2f;e.gbhtctcof&#xd;&#xa;    else e.prmprsald&#xd;&#xa;&#xd;&#xa;  end&#xd;&#xa;&#x29; as saldo_total_sus&#xd;&#xa;from evaluacion_credito_tra e&#xd;&#xa;where e.prmprcage &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>prmprcage</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>824</xloc>
+      <yloc>60</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Table output</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>target_dw</connection>
+    <schema/>
+    <table>snapshot_evaluacion_credito_fact</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>fecha_key</column_name>
+          <stream_name>fecha_key</stream_name>
+        </field>
+        <field>
+          <column_name>credito_key</column_name>
+          <stream_name>credito_key</stream_name>
+        </field>
+        <field>
+          <column_name>oficial_key</column_name>
+          <stream_name>oficial_key</stream_name>
+        </field>
+        <field>
+          <column_name>agencia_key</column_name>
+          <stream_name>agencia_key</stream_name>
+        </field>
+        <field>
+          <column_name>cliente_key</column_name>
+          <stream_name>cliente_key</stream_name>
+        </field>
+        <field>
+          <column_name>moneda_key</column_name>
+          <stream_name>moneda_key</stream_name>
+        </field>
+        <field>
+          <column_name>calificacion</column_name>
+          <stream_name>calificacion</stream_name>
+        </field>
+        <field>
+          <column_name>prevision_mn</column_name>
+          <stream_name>prevision</stream_name>
+        </field>
+        <field>
+          <column_name>dias_mora</column_name>
+          <stream_name>dias_mora</stream_name>
+        </field>
+        <field>
+          <column_name>saldo_credito</column_name>
+          <stream_name>prmprsald</stream_name>
+        </field>
+        <field>
+          <column_name>saldo_credito_me</column_name>
+          <stream_name>saldo_credito_me</stream_name>
+        </field>
+        <field>
+          <column_name>saldo_credito_bs</column_name>
+          <stream_name>saldo_credito_bs</stream_name>
+        </field>
+        <field>
+          <column_name>tipo_cambio</column_name>
+          <stream_name>gbhtctcof</stream_name>
+        </field>
+        <field>
+          <column_name>fecha_incumplimiento</column_name>
+          <stream_name>prmprfinc</stream_name>
+        </field>
+        <field>
+          <column_name>estado</column_name>
+          <stream_name>estado</stream_name>
+        </field>
+        <field>
+          <column_name>prevision_fin_mes</column_name>
+          <stream_name>prevision_fin_mes</stream_name>
+        </field>
+        <field>
+          <column_name>calificacion_fin_mes</column_name>
+          <stream_name>calificacion_fin_mes</stream_name>
+        </field>
+        <field>
+          <column_name>dias_mora_fin_mes</column_name>
+          <stream_name>dias_mora_fin_mes</stream_name>
+        </field>
+        <field>
+          <column_name>codigo_tx</column_name>
+          <stream_name>prmprnpre</stream_name>
+        </field>
+        <field>
+          <column_name>fecha_desembolso</column_name>
+          <stream_name>fecha_desembolso</stream_name>
+        </field>
+        <field>
+          <column_name>reprogramado</column_name>
+          <stream_name>reprogramado</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1167</xloc>
+      <yloc>253</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Valor garantia hipotecaria del cliente</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>staging_db</connection>
+    <rowlimit>0</rowlimit>
+    <sql>SELECT &#xa;     cast&#x28;	sum&#x28;&#xa;        case &#xa;  		 when d.prgartgar in &#x28;7,22,47,87&#x29; and d.prgarcmon &#x3d; 2 then d.prgargfin&#xa;         when d.prgartgar in &#x28;7,22,47,87&#x29; and d.prgarcmon &#x3d; 1 then d.prgargfin&#x2f;&#x3f;&#xa;  		 else 0&#xa;		end&#x29; as numeric&#x29; as monto_garantia&#xa;FROM detalle_garantias d&#xd;&#xa;inner join evaluacion_credito_tra e on &#x28;e.prmprnpre &#x3d; d.prgarnpre&#x29; &#xa;where d.prmprcage &#x3d; &#x3f;&#xd;&#xa;and e.gbconabre &#x3d; &#x27;H0&#x27;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>gbhtctcof</name>
+        <type>Number</type>
+      </field>
+      <field>
+        <name>prmprcage</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>639</xloc>
+      <yloc>62</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>creditos para evaluacion</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>staging_db</connection>
+    <sql>select e.prmprnpre, e.gbconabre, e.gbhtctcof, e.dias_mora&#xa;, e.gbpmtfdia, e.prmpragen, e.prmprcmon, e.prmprrseg&#xa;, e.prmprsald&#xa;, e.prmprstat, e.prmprtcre, e.saldo_credito_me, saldo_credito_bs&#xa;, e.prmprfinc, e.prmprcage, e.estado&#xa;, c.sector, &#x28;date_trunc&#x28;&#x27;month&#x27;, e.gbpmtfdia&#x29; &#x2b; interval &#x27;1 month&#x27;&#x29; - interval &#x27;1 day&#x27; as fin_mes&#xa;, prmprfdes, &#xa;case &#xa; when gbagecalf is null  then &#x27;A&#x27;&#xa; else gbagecalf&#xa;end gbagecalf,&#xd;&#xa;reprogramado&#xa;from  evaluacion_credito_tra e&#xa;inner join caedec_tra c on e.prmprciiu &#x3d; c.codigo_caedec&#xa;where prmprstat &#x3e; 1&#xa;--and e.prtcrdesc not like &#x27;&#x25;BDP&#x25;&#x27;&#xa;--and e.prtcrdesc not like &#x27;NO USAR&#x25;&#x27;&#xa;--and e.prtcrdesc not like &#x27;COR&#x25;&#x27;&#xd;&#xa;--and e.prmprnpre in &#x28;&#x27;172452&#x27;&#x29;&#xd;&#xa;--and e.prmprnpre in &#x28;&#x27;311104299&#x27;&#x29;&#xd;&#xa;order by e.prmprcage&#xd;&#xa;--limit 11700&#xd;&#xa;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>45</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>evalucion calificacion y prevision</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>Processor</class_name>
+
+        <class_source><![CDATA[import java.util.Arrays;
+import java.math.BigDecimal;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
+import java.util.Calendar;
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+	Object[] row = getRow();
+	if (row == null) {
+		setOutputDone();
+		return false;
+	}
+
+    if (first)
+    {
+        first = false;
+    }
+
+	// It is always safest to call createOutputRow() to ensure that your output row's Object[] is large
+    // enough to handle any new fields you are creating in this step.
+    final long MILE_SEGUNDOS_DIAS = 24 * 60 * 60 * 1000;
+
+    row = createOutputRow(row, data.outputRowMeta.size());
+
+	String calificacion = "";
+    Double prevision= 0.0;
+	Double temp_saldo=0.0;
+	String calificaicon_fin_mes = "";
+	Double prevision_fin_mes = 0.0;
+    Double saldo_dolares = 0.0;
+	Long dias_mora_fin_mes;
+	String calificacion_fin_mes="";
+    String categoria_aux = "";
+    
+	 SimpleDateFormat formatoFecha1 = new SimpleDateFormat("yyyy-MM-dd");
+     String strFecha1 = "2009-12-17";
+	 String strFecha2 = "2010-12-16";
+	 String strFecha3 = "2010-12-17";
+    Date fecha1 = null;
+	Date fecha2 = null;
+	Date fecha3 = null;
+	
+	try {
+
+		fecha1 = formatoFecha1.parse(strFecha1);
+		fecha2 = formatoFecha1.parse(strFecha2);
+		fecha3 = formatoFecha1.parse(strFecha3);
+
+	} catch (ParseException ex) {
+
+		ex.printStackTrace();
+
+	}	
+
+
+	//Categoria del credito
+	String categoria = get(Fields.In, "gbconabre").getString(row);
+    
+    //Dias mora
+    Long dias_mora = get(Fields.In, "dias_mora").getInteger(row);
+    
+    //Sector del credito segun caedec
+    String sector = get(Fields.In, "sector").getString(row);
+    //Moneda del credito
+    Long moneda = get(Fields.In, "prmprcmon").getInteger(row);
+    //Saldo del credito
+    Double saldo = get(Fields.In, "prmprsald").getNumber(row);
+	
+	Long primer_grado = get(Fields.In, "primer_grado").getInteger(row); 
+    //Calificacion creditos hipotecarios
+	
+	//tipo de cambio
+    Double tipo_cambio = get(Fields.In, "gbhtctcof").getNumber(row);
+
+	//Fecha de proximo pago
+	Date fecha_proximo_pago = get(Fields.In, "proxima_fecha_pago").getDate(row);
+    
+    //Fecha de incumplimiento
+    Date fecha_incumplimiento = get(Fields.In, "prmprfinc").getDate(row);
+   
+    //Fecha desembolso
+	Date fecha_desembolso = get(Fields.In, "prmprfdes").getDate(row);
+	
+    //Fecha fin de mes
+    Date fin_mes = get(Fields.In, "fin_mes").getDate(row);
+ 
+    //Calificacion del cliente
+	String gbagecalf = get(Fields.In, "gbagecalf").getString(row);
+
+   //Valor de la garantia hipotecaria del cliente dolarisado
+    Double monto_garantia = get(Fields.In, "monto_garantia").getNumber(row);
+
+	//Valor de las garantias hipotecarias del cliente dolarisado
+    Double monto_garantia_hipotecaria = get(Fields.In, "monto_garantia_hipotecaria").getNumber(row);    
+    
+	//Saldo total de deudas expresado en ME
+    Double saldo_total_sus = get(Fields.In, "saldo_total_sus").getNumber(row);   
+    
+    String prmprnpre = get(Fields.In, "prmprnpre").getString(row); 
+    
+    if (moneda == 1) {
+      saldo_dolares= saldo/tipo_cambio;
+    }
+    else {
+      saldo_dolares = saldo;
+    }
+     categoria_aux = categoria;
+
+     if (Arrays.asList(new String[]{"C0","C1","C2","M0","M1","M2","M3","M4","M5","M6","P0","P1","N0","N1","N2"}).contains(categoria))  {
+          if  (monto_garantia.compareTo(saldo_dolares)>0) {
+             categoria = "H0";
+          }
+     }
+ 
+     if (Arrays.asList(new String[]{"H0","H1","H2","H3","H4"}).contains(categoria)) {
+		if (dias_mora <= 30) {
+			calificacion = "A";
+       
+		}
+    	else
+		if ((dias_mora > 30) && (dias_mora <= 90)) {
+        	calificacion = "B";
+        
+    	}
+    	else
+    	if ((dias_mora > 90) && (dias_mora <= 180)) {
+        	calificacion = "C";
+    	}
+    	else
+    	if ((dias_mora > 180) && (dias_mora <= 270)) {
+        	calificacion = "D";
+    	}
+    	else
+    	if ((dias_mora > 270) && (dias_mora <= 360)) {
+        	calificacion = "E";
+    	}
+    	else
+    	if ((dias_mora > 360) ) {
+        	calificacion = "F";
+        }
+	}	
+ 
+    //Calificacion de creditos de consumo y microcreditos
+    if (Arrays.asList(new String[]{"C0","C1","C2","M0","M1","M2","M3","M4","M5","M6","P0","P1","N0","N1","N2"}).contains(categoria))  {
+		if (dias_mora <= 5) {
+			calificacion = "A";
+		}
+    	else
+		if ((dias_mora > 5) && (dias_mora <= 30)) {
+        	calificacion = "B";
+       
+    	}
+    	else
+    	if ((dias_mora > 30) && (dias_mora <= 55)) {
+        	calificacion = "C";
+    	}
+    	else
+    	if ((dias_mora > 55) && (dias_mora <= 75)) {
+        	calificacion = "D";
+    	}
+    	else
+    	if ((dias_mora > 75) && (dias_mora <= 90)) {
+        	calificacion = "E";
+    	}
+    	else
+    	if ((dias_mora > 90) ) {
+        	calificacion = "F";
+//        logBasic("*** calificacion *** > " + calificacion);
+//     logBasic("*** DiasMora *** > " + dias_mora);
+//     logBasic("*** categoria *** > " + categoria); 
+    	}
+	 } 
+   
+    //Calificacion de creditos agropecuares
+    if (Arrays.asList(new String[]{"C3","M7","M8","M9","P2","P3","P4","P5","P6"}).contains(categoria)) {
+		if (dias_mora <= 20) {
+			calificacion = "A";
+		}
+    	else
+		if ((dias_mora > 20) && (dias_mora <= 30)) {
+        	calificacion = "B";
+    	}
+    	else
+    	if ((dias_mora > 30) && (dias_mora <= 55)) {
+        	calificacion = "C";
+    	}
+    	else
+    	if ((dias_mora > 55) && (dias_mora <= 75)) {
+        	calificacion = "D";
+    	}
+    	else
+    	if ((dias_mora > 75) && (dias_mora <= 90)) {
+        	calificacion = "E";
+    	}
+    	else
+    	if ((dias_mora > 90) ) {
+        	calificacion = "F";
+    	}
+	 } 
+//	logBasic("*** DiasMora *** > " + dias_mora);
+//    logBasic("*** categoria *** > " + categoria);	
+	
+//    logBasic("*** Primer garado *** > " + primer_grado);	
+
+	if (gbagecalf.compareTo(calificacion)>0) {
+      calificacion = gbagecalf;
+
+	}	
+
+    
+   //Calcular la prevision
+ 
+   if (primer_grado == 1) {
+	  if (saldo_dolares.compareTo(monto_garantia_hipotecaria)<=0) {
+    
+        temp_saldo = saldo_dolares * 0.5;
+      }
+      else {
+        temp_saldo = saldo_dolares - (monto_garantia_hipotecaria* 0.5);
+        
+      }
+     
+      
+   }
+   else {
+	temp_saldo = saldo_dolares;
+	}
+
+
+//   if (moneda == 2) {
+     temp_saldo = temp_saldo * tipo_cambio;
+//   }
+ //  logBasic("*** Temp saldo *** > " + saldo);
+   
+   categoria = categoria_aux; //VUELVA A SU CATEGORIA ORIGINAL
+   if (moneda==1) {
+  
+       if ((Arrays.asList(new String[]{"C0","C1","C2","M0","M1","M2","M3","M4","M5","M6","M7","M8","M9","P0","P1","P2","P3","P4","P5", "P6"}).contains(categoria)) && sector.equals("PRODUCTIVO")) {
+        
+       	if (calificacion.equals("A")) {
+  			prevision = 0.0;
+       	}
+		else if (calificacion.equals("B")) {
+            prevision = temp_saldo * 0.025;
+		}
+
+        else if (calificacion.equals("C")) {
+            prevision = temp_saldo * 0.2;
+		}
+        else if (calificacion.equals("D")) {
+            prevision = temp_saldo * 0.5;
+		}
+        else if (calificacion.equals("E")) {
+            prevision = temp_saldo * 0.8;
+		}
+		else if (calificacion.equals("F")) {
+            prevision = temp_saldo * 1;
+		}
+       } 
+       else if ((Arrays.asList(new String[]{"C0","C1","C2","M0","M1","M2","M3","M4","M5","M6","P0","P1","P2","P3","P4","P5", "P6"}).contains(categoria)) && !sector.equals("PRODUCTIVO")){ //creditos no productivos
+        if (calificacion.equals("A")) {
+  			prevision = temp_saldo * 0.0025;
+       	}
+		else if (calificacion.equals("B")) {
+            prevision = temp_saldo * 0.05;
+		}
+
+        else if (calificacion.equals("C")) {
+            prevision = temp_saldo * 0.2;
+		}
+        else if (calificacion.equals("D")) {
+            prevision = temp_saldo * 0.5;
+		}
+        else if (calificacion.equals("E")) {
+            prevision = temp_saldo * 0.8;
+		}
+		else if (calificacion.equals("F")) {
+            prevision = temp_saldo * 1;
+		}  
+       }
+	   //Prevision vivienda moneda nacional
+	   if (Arrays.asList(new String[]{"H0", "H1","H4","H2","H3"}).contains(categoria))  {
+       	if (calificacion.equals("A")) {
+  			prevision = temp_saldo* 0.0025;
+       	}
+		else if (calificacion.equals("B")){
+            prevision = temp_saldo * 0.05;
+		}
+        else if (calificacion.equals("C")) {
+            prevision = temp_saldo * 0.2;
+		}
+        else if (calificacion.equals("D")) {
+            prevision = temp_saldo * 0.5;
+		}
+        else if (calificacion.equals("E")) {
+            prevision = temp_saldo * 0.8;
+		}
+		else if (calificacion.equals("F")) {
+            prevision = temp_saldo * 1;
+		}
+       } 
+/*	   else if (Arrays.asList(new String[]{"H1","H4"}).contains(categoria))  {
+			if (calificacion.equals("A")) {
+				prevision = temp_saldo * 0.03;
+			}
+			else if (calificacion.equals("B")){
+				prevision = temp_saldo * 0.065;
+			}
+			else if (calificacion.equals("C")) {
+				prevision = temp_saldo * 0.2;
+			}
+			else if (calificacion.equals("D")) {
+				prevision = temp_saldo * 0.5;
+			}
+			else if (calificacion.equals("E")) {
+				prevision = temp_saldo * 0.8;
+			}
+			else if (calificacion.equals("F")) {
+			 prevision = temp_saldo;
+			}
+		}
+*/		
+		//Prevision consumo
+	   
+	   if (Arrays.asList(new String[]{"N0","N1","N2"}).contains(categoria))  {
+	      //Fecha de desembolso antes del 17/12/2009
+		  if (fecha_desembolso.getTime() <= fecha1.getTime()) {
+			if (calificacion.equals("A")) {
+				prevision = temp_saldo * 0.0025;
+			}
+			else if (calificacion.equals("B")){
+				prevision = temp_saldo * 0.05;
+			}
+			else if (calificacion.equals("C")){
+				prevision = temp_saldo* 0.2;
+			}
+			else if (calificacion.equals("D")) {
+				prevision = temp_saldo*0.5;
+			}
+			else if (calificacion.equals("E")) {
+				prevision = temp_saldo*0.8;
+			}
+			else if (calificacion.equals("F")) {
+				prevision = temp_saldo * 1;
+			}
+		  }
+		   //Fecha de desembolso a partir del 17/12/2009 hasta 16/12/2010
+		  if ((fecha_desembolso.getTime() > fecha1.getTime()) &&(fecha_desembolso.getTime() <= fecha2.getTime())) {
+			if (calificacion.equals("A")) {
+				prevision = temp_saldo * 0.015;
+			}
+			else if (calificacion.equals("B")){
+				prevision = temp_saldo * 0.065;
+			}
+			else if (calificacion.equals("C")){
+				prevision = temp_saldo* 0.2;
+			}
+			else if (calificacion.equals("D")) {
+				prevision = temp_saldo*0.5;
+			}
+			else if (calificacion.equals("E")) {
+				prevision = temp_saldo*0.8;
+			}
+			else if (calificacion.equals("F")) {
+				prevision = temp_saldo * 1;
+			}
+		  }
+		  //Fecha de desembolso  desde 17/12/2010
+		  if (fecha_desembolso.getTime() >= fecha3.getTime()) {
+			if (calificacion.equals("A")) {
+				prevision = temp_saldo * 0.03;
+			}
+			else if (calificacion.equals("B")){
+				prevision = temp_saldo * 0.065;
+			}
+			else if (calificacion.equals("C")){
+				prevision = temp_saldo* 0.2;
+			}
+			else if (calificacion.equals("D")) {
+				prevision = temp_saldo*0.5;
+			}
+			else if (calificacion.equals("E")) {
+				prevision = temp_saldo*0.8;
+			}
+			else if (calificacion.equals("F")) {
+				prevision = temp_saldo * 1;
+			}
+		  } 
+         		  
+       } 
+   
+   } else { //operaciones en dolares
+       if (Arrays.asList(new String[]{"C0","C1","C2","M0","M1","M2","M3","M4","M5","M6","M7","M8","M9","P0","P1","P2","P3","P4","P5", "P6"}).contains(categoria))  {
+       	if (calificacion.equals("A")) {
+  			prevision = temp_saldo * 0.025;
+       	}
+		else if (calificacion.equals("B")) {
+            prevision = temp_saldo * 0.05;
+		}
+
+        else if (calificacion.equals("C")) {
+            prevision = temp_saldo * 0.2;
+		}
+        else if (calificacion.equals("D")) {
+            prevision = temp_saldo * 0.5;
+		}
+        else if (calificacion.equals("E")) {
+            prevision = temp_saldo * 0.8;
+		}
+		else if (calificacion.equals("F")) {
+            prevision = temp_saldo * 1;
+		}
+       } 
+    
+	   //Prevision vivienda moneda extranjera
+	   if (Arrays.asList(new String[]{"H0","H1","H4","H2","H3"}).contains(categoria))  {
+       	if (calificacion.equals("A")) {
+  			prevision = temp_saldo * 0.025;
+       	}
+		else if (calificacion.equals("B")){
+            prevision = temp_saldo * 0.05;
+		}
+		else if (calificacion.equals("C")) {
+			prevision = temp_saldo * 0.2;
+		}
+        else if (calificacion.equals("D")) {
+            prevision = temp_saldo* 0.5;
+		}
+        else if (calificacion.equals("E")) {
+            prevision = temp_saldo * 0.8;
+		}
+		else if (calificacion.equals("F")) {
+            prevision = temp_saldo * 1;
+		}
+       } 
+/*	   else if (Arrays.asList(new String[]{"H1","H4"}).contains(categoria))  {
+	        if (calificacion.equals("A")) {
+			    prevision = temp_saldo * 0.07;
+			}
+			else if (calificacion.equals("B")){
+				prevision = temp_saldo * 0.12;
+			}
+			else if (calificacion.equals("C")) {
+				prevision = temp_saldo * 0.2;
+			}
+			else if (calificacion.equals("D"))  {
+				prevision = temp_saldo * 0.5;
+			}
+			else if (calificacion.equals("E")) {
+				prevision = temp_saldo * 0.8;
+			}
+			else if (calificacion.equals("F")) {
+				prevision = temp_saldo;
+			}
+	   }
+*/		
+		//Prevision consumo
+	   if (Arrays.asList(new String[]{"N0","N1","N2"}).contains(categoria))  {
+	      //Fecha de desembolso antes del 17/12/2009
+		  if (fecha_desembolso.getTime() <= fecha1.getTime()) {
+			if (calificacion.equals("A")) {
+				prevision = temp_saldo * 0.025;
+			}
+			else if (calificacion.equals("B")){
+				prevision = temp_saldo * 0.05;
+			}
+			else if (calificacion.equals("C")){
+				prevision = temp_saldo* 0.2;
+			}
+			else if (calificacion.equals("D")) {
+				prevision = temp_saldo*0.5;
+			}
+			else if (calificacion.equals("E")) {
+				prevision = temp_saldo*0.8;
+			}
+			else if (calificacion.equals("F")) {
+				prevision = temp_saldo * 1;
+			}
+		  }
+		   //Fecha de desembolso a partir del 17/12/2009 hasta 16/12/2010
+		  if ((fecha_desembolso.getTime() > fecha1.getTime()) &&(fecha_desembolso.getTime() <= fecha2.getTime())) {
+			if (calificacion.equals("A")) {
+				prevision = temp_saldo * 0.05;
+			}
+			else if (calificacion.equals("B")){
+				prevision = temp_saldo * 0.08;
+			}
+			else if (calificacion.equals("C")){
+				prevision = temp_saldo* 0.2;
+			}
+			else if (calificacion.equals("D")) {
+				prevision = temp_saldo*0.5;
+			}
+			else if (calificacion.equals("E")) {
+				prevision = temp_saldo*0.8;
+			}
+			else if (calificacion.equals("F")) {
+				prevision = temp_saldo * 1;
+			}
+		  }
+		  //Fecha de desembolso  desde 17/12/2010
+		  if (fecha_desembolso.getTime() >= fecha3.getTime()) {
+			if (calificacion.equals("A")) {
+				prevision = temp_saldo * 0.07;
+			}
+			else if (calificacion.equals("B")){
+				prevision = temp_saldo * 0.12;
+			}
+			else if (calificacion.equals("C")){
+				prevision = temp_saldo* 0.2;
+			}
+			else if (calificacion.equals("D")) {
+				prevision = temp_saldo*0.5;
+			}
+			else if (calificacion.equals("E")) {
+				prevision = temp_saldo*0.8;
+			}
+			else if (calificacion.equals("F")) {
+				prevision = temp_saldo * 1;
+			}
+		  } 
+       }    
+   
+   }
+   
+	/////////////////////
+	 
+     SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
+	 String fechaInicio = "01/01/1900";
+	 Date fecha_nula = null;
+
+	 try {
+	 	fecha_nula = formatoFecha.parse(fechaInicio);
+        if (fecha_proximo_pago == null) {
+          fecha_proximo_pago = formatoFecha.parse(fechaInicio); 
+        }
+	 } catch (ParseException ex) {
+		ex.printStackTrace();
+	 }
+     
+	 if (fecha_incumplimiento.compareTo(fecha_nula) == 0) {
+        if (fecha_proximo_pago.compareTo(fecha_nula) == 0) {
+		    dias_mora_fin_mes = (long)0;
+        } else {		
+	    	dias_mora_fin_mes = (fin_mes.getTime() -  fecha_proximo_pago.getTime())/MILE_SEGUNDOS_DIAS;
+        }
+	 } else {
+	    dias_mora_fin_mes = (fin_mes.getTime() -  fecha_incumplimiento.getTime())/MILE_SEGUNDOS_DIAS;  
+	 }
+	 
+     categoria_aux = categoria;
+
+     if (Arrays.asList(new String[]{"C0","C1","C2","M0","M1","M2","M3","M4","M5","M6","P0","P1","N0","N1","N2"}).contains(categoria))  {
+          if  (monto_garantia.compareTo(saldo_total_sus)>=0) {
+             categoria = "H0";
+          }
+     }
+
+     logBasic("*** categoria *** > " + categoria);	
+	 
+	if (Arrays.asList(new String[]{"H0","H1","H2","H3","H4"}).contains(categoria)) {
+		if (dias_mora_fin_mes <= 30) {
+			calificacion_fin_mes = "A";
+		}
+    	else
+		if ((dias_mora_fin_mes > 30) && (dias_mora_fin_mes <= 90)) {
+        	calificacion_fin_mes = "B";
+    	}
+    	else
+    	if ((dias_mora_fin_mes > 90) && (dias_mora_fin_mes <= 180)) {
+        	calificacion_fin_mes = "C";
+    	}
+    	else
+    	if ((dias_mora_fin_mes > 180) && (dias_mora_fin_mes <= 270)) {
+        	calificacion_fin_mes = "D";
+    	}
+    	else
+    	if ((dias_mora_fin_mes > 270) && (dias_mora_fin_mes <= 360)) {
+        	calificacion_fin_mes = "E";
+    	}
+    	else
+    	if ((dias_mora_fin_mes > 360) ) {
+        	calificacion_fin_mes = "F";
+        }
+	}	
+    //calificacion_fin_mes de creditos de consumo y microcreditos
+    if (Arrays.asList(new String[]{"C0","C1","C2","M0","M1","M2","M3","M4","M5","M6","P0","P1","N0","N1","N2"}).contains(categoria))  {
+		if (dias_mora_fin_mes <= 5) {
+			calificacion_fin_mes = "A";
+		}
+    	else
+		if ((dias_mora_fin_mes > 5) && (dias_mora_fin_mes <= 30)) {
+        	calificacion_fin_mes = "B";
+    	}
+    	else
+    	if ((dias_mora_fin_mes > 30) && (dias_mora_fin_mes <= 55)) {
+        	calificacion_fin_mes = "C";
+    	}
+    	else
+    	if ((dias_mora_fin_mes > 55) && (dias_mora_fin_mes <= 75)) {
+        	calificacion_fin_mes = "D";
+    	}
+    	else
+    	if ((dias_mora_fin_mes > 75) && (dias_mora_fin_mes <= 90)) {
+        	calificacion_fin_mes = "E";
+    	}
+    	else
+    	if ((dias_mora_fin_mes > 90) ) {
+        	calificacion_fin_mes = "F";
+    	}
+	 } 
+
+    //calificacion_fin_mes de creditos agropecuares
+    if (Arrays.asList(new String[]{"C3","M7","M8","M9","P2","P3","P4","P5","P6"}).contains(categoria)) {
+		if (dias_mora_fin_mes <= 20) {
+			calificacion_fin_mes = "A";
+		}
+    	else
+		if ((dias_mora_fin_mes > 20) && (dias_mora_fin_mes <= 30)) {
+        	calificacion_fin_mes = "B";
+    	}
+    	else
+    	if ((dias_mora_fin_mes > 30) && (dias_mora_fin_mes <= 55)) {
+        	calificacion_fin_mes = "C";
+    	}
+    	else
+    	if ((dias_mora_fin_mes > 55) && (dias_mora_fin_mes <= 75)) {
+        	calificacion_fin_mes = "D";
+    	}
+    	else
+    	if ((dias_mora_fin_mes > 75) && (dias_mora_fin_mes <= 90)) {
+        	calificacion_fin_mes = "E";
+    	}
+    	else
+    	if ((dias_mora_fin_mes > 90) ) {
+        	calificacion_fin_mes = "F";
+    	}
+	 } 
+			
+     if (gbagecalf.compareTo(calificacion_fin_mes)>0){
+		calificacion_fin_mes = gbagecalf;
+	 } 
+
+     categoria = categoria_aux; //VUELVA A SU CATEGORIA ORIGINAL
+   //Calculo de la mora y prevision_fin_mes proyectada a fin de mes
+     	 
+	 if (moneda==1) {
+  
+       if ((Arrays.asList(new String[]{"C0","C1","C2","M0","M1","M2","M3","M4","M5","M6","M7","M8","M9","P0","P1","P2","P3","P4","P5", "P6"}).contains(categoria)) && sector.equals("PRODUCTIVO")) {
+        
+       	if (calificacion_fin_mes.equals("A")) {
+  			prevision_fin_mes = 0.0;
+       	}
+		else if (calificacion_fin_mes.equals("B")) {
+            prevision_fin_mes = temp_saldo * 0.025;
+		}
+
+        else if (calificacion_fin_mes.equals("C")) {
+            prevision_fin_mes = temp_saldo * 0.2;
+		}
+        else if (calificacion_fin_mes.equals("D")) {
+            prevision_fin_mes = temp_saldo * 0.5;
+		}
+        else if (calificacion_fin_mes.equals("E")) {
+            prevision_fin_mes = temp_saldo * 0.8;
+		}
+		else if (calificacion_fin_mes.equals("F")) {
+            prevision_fin_mes = temp_saldo * 1;
+		}
+       } 
+       else if ((Arrays.asList(new String[]{"C0","C1","C2","M0","M1","M2","M3","M4","M5","M6","P0","P1","P2","P3","P4","P5", "P6"}).contains(categoria)) && !sector.equals("PRODUCTIVO")){ //creditos no productivos
+        if (calificacion_fin_mes.equals("A")) {
+  			prevision_fin_mes = temp_saldo * 0.0025;
+       	}
+		else if (calificacion_fin_mes.equals("B")) {
+            prevision_fin_mes = temp_saldo * 0.05;
+		}
+
+        else if (calificacion_fin_mes.equals("C")) {
+            prevision_fin_mes = temp_saldo * 0.2;
+		}
+        else if (calificacion_fin_mes.equals("D")) {
+            prevision_fin_mes = temp_saldo * 0.5;
+		}
+        else if (calificacion_fin_mes.equals("E")) {
+            prevision_fin_mes = temp_saldo * 0.8;
+		}
+		else if (calificacion_fin_mes.equals("F")) {
+            prevision_fin_mes = temp_saldo * 1;
+		}  
+       }
+	   //prevision_fin_mes vivienda moneda nacional
+	   if (Arrays.asList(new String[]{"H0", "H1","H4","H2","H3"}).contains(categoria))  {
+       	if (calificacion_fin_mes.equals("A")) {
+  			prevision_fin_mes = temp_saldo* 0.0025;
+       	}
+		else if (calificacion_fin_mes.equals("B")){
+            prevision_fin_mes = temp_saldo * 0.05;
+		}
+        else if (calificacion_fin_mes.equals("C")) {
+            prevision_fin_mes = temp_saldo * 0.2;
+		}
+        else if (calificacion_fin_mes.equals("D")) {
+            prevision_fin_mes = temp_saldo * 0.5;
+		}
+        else if (calificacion_fin_mes.equals("E")) {
+            prevision_fin_mes = temp_saldo * 0.8;
+		}
+		else if (calificacion_fin_mes.equals("F")) {
+            prevision_fin_mes = temp_saldo * 1;
+		}
+       } 
+/*	   else if (Arrays.asList(new String[]{"H1","H4"}).contains(categoria))  {
+			if (calificacion_fin_mes.equals("A")) {
+				prevision_fin_mes = temp_saldo * 0.03;
+			}
+			else if (calificacion_fin_mes.equals("B")){
+				prevision_fin_mes = temp_saldo * 0.065;
+			}
+			else if (calificacion_fin_mes.equals("C")) {
+				prevision_fin_mes = temp_saldo * 0.2;
+			}
+			else if (calificacion_fin_mes.equals("D")) {
+				prevision_fin_mes = temp_saldo * 0.5;
+			}
+			else if (calificacion_fin_mes.equals("E")) {
+				prevision_fin_mes = temp_saldo * 0.8;
+			}
+			else if (calificacion_fin_mes.equals("F")) {
+			 prevision_fin_mes = temp_saldo;
+			}
+		}
+*/		
+		//prevision_fin_mes consumo
+	   
+	   if (Arrays.asList(new String[]{"N0","N1","N2"}).contains(categoria))  {
+	      //Fecha de desembolso antes del 17/12/2009
+		  if (fecha_desembolso.getTime() <= fecha1.getTime()) {
+			if (calificacion_fin_mes.equals("A")) {
+				prevision_fin_mes = temp_saldo * 0.0025;
+			}
+			else if (calificacion_fin_mes.equals("B")){
+				prevision_fin_mes = temp_saldo * 0.05;
+			}
+			else if (calificacion_fin_mes.equals("C")){
+				prevision_fin_mes = temp_saldo* 0.2;
+			}
+			else if (calificacion_fin_mes.equals("D")) {
+				prevision_fin_mes = temp_saldo*0.5;
+			}
+			else if (calificacion_fin_mes.equals("E")) {
+				prevision_fin_mes = temp_saldo*0.8;
+			}
+			else if (calificacion_fin_mes.equals("F")) {
+				prevision_fin_mes = temp_saldo * 1;
+			}
+		  }
+		   //Fecha de desembolso a partir del 17/12/2009 hasta 16/12/2010
+		  if ((fecha_desembolso.getTime() > fecha1.getTime()) &&(fecha_desembolso.getTime() <= fecha2.getTime())) {
+			if (calificacion_fin_mes.equals("A")) {
+				prevision_fin_mes = temp_saldo * 0.015;
+			}
+			else if (calificacion_fin_mes.equals("B")){
+				prevision_fin_mes = temp_saldo * 0.065;
+			}
+			else if (calificacion_fin_mes.equals("C")){
+				prevision_fin_mes = temp_saldo* 0.2;
+			}
+			else if (calificacion_fin_mes.equals("D")) {
+				prevision_fin_mes = temp_saldo*0.5;
+			}
+			else if (calificacion_fin_mes.equals("E")) {
+				prevision_fin_mes = temp_saldo*0.8;
+			}
+			else if (calificacion_fin_mes.equals("F")) {
+				prevision_fin_mes = temp_saldo * 1;
+			}
+		  }
+		  //Fecha de desembolso  desde 17/12/2010
+		  if (fecha_desembolso.getTime() >= fecha3.getTime()) {
+			if (calificacion_fin_mes.equals("A")) {
+				prevision_fin_mes = temp_saldo * 0.03;
+			}
+			else if (calificacion_fin_mes.equals("B")){
+				prevision_fin_mes = temp_saldo * 0.065;
+			}
+			else if (calificacion_fin_mes.equals("C")){
+				prevision_fin_mes = temp_saldo* 0.2;
+			}
+			else if (calificacion_fin_mes.equals("D")) {
+				prevision_fin_mes = temp_saldo*0.5;
+			}
+			else if (calificacion_fin_mes.equals("E")) {
+				prevision_fin_mes = temp_saldo*0.8;
+			}
+			else if (calificacion_fin_mes.equals("F")) {
+				prevision_fin_mes = temp_saldo * 1;
+			}
+		  } 
+         		  
+       } 
+   
+   } else { //operaciones en dolares
+       if (Arrays.asList(new String[]{"C0","C1","C2","M0","M1","M2","M3","M4","M5","M6","M7","M8","M9","P0","P1","P2","P3","P4","P5", "P6"}).contains(categoria))  {
+       	if (calificacion_fin_mes.equals("A")) {
+  			prevision_fin_mes = temp_saldo * 0.025;
+       	}
+		else if (calificacion_fin_mes.equals("B")) {
+            prevision_fin_mes = temp_saldo * 0.05;
+		}
+
+        else if (calificacion_fin_mes.equals("C")) {
+            prevision_fin_mes = temp_saldo * 0.2;
+		}
+        else if (calificacion_fin_mes.equals("D")) {
+            prevision_fin_mes = temp_saldo * 0.5;
+		}
+        else if (calificacion_fin_mes.equals("E")) {
+            prevision_fin_mes = temp_saldo * 0.8;
+		}
+		else if (calificacion_fin_mes.equals("F")) {
+            prevision_fin_mes = temp_saldo * 1;
+		}
+       } 
+    
+	   //prevision_fin_mes vivienda moneda extranjera
+	   if (Arrays.asList(new String[]{"H0","H1","H4","H2","H3"}).contains(categoria))  {
+       	if (calificacion_fin_mes.equals("A")) {
+  			prevision_fin_mes = temp_saldo * 0.025;
+       	}
+		else if (calificacion_fin_mes.equals("B")){
+            prevision_fin_mes = temp_saldo * 0.05;
+		}
+		else if (calificacion_fin_mes.equals("C")) {
+			prevision_fin_mes = temp_saldo * 0.2;
+		}
+        else if (calificacion_fin_mes.equals("D")) {
+            prevision_fin_mes = temp_saldo* 0.5;
+		}
+        else if (calificacion_fin_mes.equals("E")) {
+            prevision_fin_mes = temp_saldo * 0.8;
+		}
+		else if (calificacion_fin_mes.equals("F")) {
+            prevision_fin_mes = temp_saldo * 1;
+		}
+       } 
+/*	   else if (Arrays.asList(new String[]{"H1","H4"}).contains(categoria))  {
+	        if (calificacion_fin_mes.equals("A")) {
+			    prevision_fin_mes = temp_saldo * 0.07;
+			}
+			else if (calificacion_fin_mes.equals("B")){
+				prevision_fin_mes = temp_saldo * 0.12;
+			}
+			else if (calificacion_fin_mes.equals("C")) {
+				prevision_fin_mes = temp_saldo * 0.2;
+			}
+			else if (calificacion_fin_mes.equals("D"))  {
+				prevision_fin_mes = temp_saldo * 0.5;
+			}
+			else if (calificacion_fin_mes.equals("E")) {
+				prevision_fin_mes = temp_saldo * 0.8;
+			}
+			else if (calificacion_fin_mes.equals("F")) {
+				prevision_fin_mes = temp_saldo;
+			}
+	   }
+*/		
+		//prevision_fin_mes consumo
+	   if (Arrays.asList(new String[]{"N0","N1","N2"}).contains(categoria))  {
+	      //Fecha de desembolso antes del 17/12/2009
+		  if (fecha_desembolso.getTime() <= fecha1.getTime()) {
+			if (calificacion_fin_mes.equals("A")) {
+				prevision_fin_mes = temp_saldo * 0.025;
+			}
+			else if (calificacion_fin_mes.equals("B")){
+				prevision_fin_mes = temp_saldo * 0.05;
+			}
+			else if (calificacion_fin_mes.equals("C")){
+				prevision_fin_mes = temp_saldo* 0.2;
+			}
+			else if (calificacion_fin_mes.equals("D")) {
+				prevision_fin_mes = temp_saldo*0.5;
+			}
+			else if (calificacion_fin_mes.equals("E")) {
+				prevision_fin_mes = temp_saldo*0.8;
+			}
+			else if (calificacion_fin_mes.equals("F")) {
+				prevision_fin_mes = temp_saldo * 1;
+			}
+		  }
+		   //Fecha de desembolso a partir del 17/12/2009 hasta 16/12/2010
+		  if ((fecha_desembolso.getTime() > fecha1.getTime()) &&(fecha_desembolso.getTime() <= fecha2.getTime())) {
+			if (calificacion_fin_mes.equals("A")) {
+				prevision_fin_mes = temp_saldo * 0.05;
+			}
+			else if (calificacion_fin_mes.equals("B")){
+				prevision_fin_mes = temp_saldo * 0.08;
+			}
+			else if (calificacion_fin_mes.equals("C")){
+				prevision_fin_mes = temp_saldo* 0.2;
+			}
+			else if (calificacion_fin_mes.equals("D")) {
+				prevision_fin_mes = temp_saldo*0.5;
+			}
+			else if (calificacion_fin_mes.equals("E")) {
+				prevision_fin_mes = temp_saldo*0.8;
+			}
+			else if (calificacion_fin_mes.equals("F")) {
+				prevision_fin_mes = temp_saldo * 1;
+			}
+		  }
+		  //Fecha de desembolso  desde 17/12/2010
+		  if (fecha_desembolso.getTime() >= fecha3.getTime()) {
+			if (calificacion_fin_mes.equals("A")) {
+				prevision_fin_mes = temp_saldo * 0.07;
+			}
+			else if (calificacion_fin_mes.equals("B")){
+				prevision_fin_mes = temp_saldo * 0.12;
+			}
+			else if (calificacion_fin_mes.equals("C")){
+				prevision_fin_mes = temp_saldo* 0.2;
+			}
+			else if (calificacion_fin_mes.equals("D")) {
+				prevision_fin_mes = temp_saldo*0.5;
+			}
+			else if (calificacion_fin_mes.equals("E")) {
+				prevision_fin_mes = temp_saldo*0.8;
+			}
+			else if (calificacion_fin_mes.equals("F")) {
+				prevision_fin_mes = temp_saldo * 1;
+			}
+		  } 
+       }    
+   
+   }   
+  
+   get(Fields.Out, "calificacion").setValue(row, calificacion);
+   get(Fields.Out, "prevision").setValue(row,prevision);	
+   get(Fields.Out, "calificacion_fin_mes").setValue(row, calificacion_fin_mes);
+   get(Fields.Out, "prevision_fin_mes").setValue(row,prevision_fin_mes);
+   
+   get(Fields.Out, "dias_mora_fin_mes").setValue(row, dias_mora_fin_mes);
+   get(Fields.Out, "fecha_desembolso").setValue(row, fecha_desembolso);
+   
+   get(Fields.Out, "categoria").setValue(row, categoria);
+
+  // logBasic("*** dias mora fin mes *** > " + dias_mora_fin_mes);		
+ 
+	// Send the row on to the next step.
+    putRow(data.outputRowMeta, row);
+
+	return true;
+}
+]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+        <field>
+        <field_name>calificacion</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>prevision</field_name>
+
+        <field_type>Number</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>calificacion_fin_mes</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>prevision_fin_mes</field_name>
+
+        <field_type>Number</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>dias_mora_fin_mes</field_name>
+
+        <field_type>Integer</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>fecha_desembolso</field_name>
+
+        <field_type>Date</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>categoria</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+    </fields><clear_result_fields>N</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1356</xloc>
+      <yloc>58</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>
