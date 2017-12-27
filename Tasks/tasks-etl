@@ -1,0 +1,28 @@
+Clientes (Agenda)
+1. Clientes con carnet duplicados
+2. clientes sin carnet
+3. Clientes con carnet duplicado que tengan creditos
+4. Clientes con carnet duplicado que tengan cajas de ahorro
+5. Clientes con carnet duplicado que tengan dpf
+7. Clientes sin fecha de nacimiento
+8. Clientes con fecha de nacimiento menores a 1920
+9. Clientes mayores a 70 anios con creditos recientes en la gestion 2017
+
+Cartera
+1. Clientes con creditos sin certificado de aportacion
+2. Creditos Hipotecarios sin garantia
+3. Creditos con garantia de DPF que no cubra el monto del credito
+4. Contagio de calificacion de creditos
+5. Calificacion por dias mora
+
+Cajas de Ahorro
+1. Cajas de ahorro activas con saldo 0
+2. Cajas inactivas que tengan movimientos en retiros o depositos
+
+
+Certificados de aportacion
+1. Certificados por montos diferentes al valor de un certificado
+
+Depositos a Plazo Fijo
+1. Lista de numeros de certificados faltantes
+2. Comparacion de los devengados entregados vs los calculados
